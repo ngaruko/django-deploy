@@ -17,6 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+#testing data for sentry > 
+def trigger_error(request):
+    fakes = [23, 34, 87, 90]
+    print(fakes[4])
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('sentry-debug/', trigger_error) #testing sentry 
 ]
