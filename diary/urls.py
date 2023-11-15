@@ -26,5 +26,6 @@ def trigger_error(request):
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home', views.home),
+    path('restricted', views.restricted),
     path('sentry-debug/', trigger_error) #testing sentry 
 ]

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     # added apps
     'home',
+    'entries'
 ]
 
 MIDDLEWARE = [
