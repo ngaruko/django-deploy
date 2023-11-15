@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
 from home import views
 
 #testing data for sentry > 
@@ -26,6 +26,7 @@ def trigger_error(request):
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home', views.home),
+    path('diary/', include('events.urls')),
     path('restricted', views.restricted),
     path('sentry-debug/', trigger_error) #testing sentry 
 ]
